@@ -8,6 +8,10 @@ const profile = require("./routes/api/profile");
 
 const app = express();
 
+// Body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 const db = require("./config/keys").mongoURI;
 
 mongoose
